@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Page index</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome !!!</h1>
+
+        
+        {% if tableau is not empty %}
+        	<h2>Contenu de ma table </h2>
+        	{% for t in tableau %}
+        		<p> <strong>Nom : </strong> {{ t['nom'] }} <br> <strong>Prénom : </strong> {{ t['prenom'] }} </p>
+        	{% endfor %}
+        
+
+        {% else %}
+        	<p>Table empty </p>
+        {% endif %}
+
+        <a href="/">
+            <button>Retour</button>
+        </a>
+    </body>
+</html>
